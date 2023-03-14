@@ -1,21 +1,22 @@
-import './App.css';
+import { userEffect } from 'react';
 
-const Person = () => {
-  return(
-    <>
-    <h1>Name: Michael</h1>
-    <h2>Last Name: Kainer</h2>
-    <h2>Age: 30</h2>
-    </>
-  )
-}
+//e8a408ec
+
+const API_URL = 'http://www.omdbapi.com?apikey=e8a408ec';
 
 const App = () => {
-  return (
-    <div className="App">
-      <Person />
-    </div>
-  );
+    
+    const searchMovies = async (title) => {
+        const response = await fetch(`${API_URL}&s=${title}`);
+    }
+    
+    useEffct(() => {
+
+    }, []);
+    
+    return(
+        <h1>App</h1>
+    );
 }
 
 export default App;
